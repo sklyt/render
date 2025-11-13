@@ -1,0 +1,38 @@
+{
+  "name": "renderer",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "install": "node-gyp-build",
+    "build:js": "rollup -c && node scripts/copy-prebuilds.js",
+    "build:types": "tsc -p tsconfig.types.json",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-gyp-build": "^4.8.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@types/node": "^24.10.1",
+    "rollup": "^2.79.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^5.9.3"
+  }
+}

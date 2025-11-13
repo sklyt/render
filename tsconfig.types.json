@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "allowJs": true,
+    "outDir": "dist/types",
+    "rootDir": "src",
+    "declarationMap": false,
+    "moduleResolution": "node",
+    "target": "ES2019",
+    "module": "ESNext",
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.js"]
+}
