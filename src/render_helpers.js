@@ -234,9 +234,11 @@ export class PerformanceMonitor {
         this.metrics = new Map();
         this.frameTimes = [];
         this.samples = 60; // Keep last 60 frames
+        this.enabled = false;
     }
 
     start(name) {
+
         this.metrics.set(name, {
             start: performance.now(),
             calls: (this.metrics.get(name)?.calls || 0) + 1

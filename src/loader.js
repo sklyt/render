@@ -489,8 +489,9 @@ export class Renderer {
         //  *   hideConsole: ()=> void,
         //  *   showConsole: () => void,
         //  * }}
-        const { Renderer, RESIZABLE, UNDECORATED, ALWAYS_RUN, VSYNC_HINT, MSAA_4X_HINT, hideConsole, showConsole } = isSea ? loadRendererSea({ assetGetterSync }) : loadRenderer()
+        const { Renderer,FULLSCREEN, RESIZABLE, UNDECORATED, ALWAYS_RUN, VSYNC_HINT, MSAA_4X_HINT, hideConsole, showConsole } = isSea ? loadRendererSea({ assetGetterSync }) : loadRenderer()
         this.ops = {
+            FULLSCREEN,
             RESIZABLE,
             UNDECORATED,
             ALWAYS_RUN,
